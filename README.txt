@@ -1,1 +1,1 @@
-Projet de blackjack en python !
+Projet de blackjack en java :c !
