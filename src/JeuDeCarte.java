@@ -37,10 +37,10 @@ public class JeuDeCarte {
 		return this.paquet.get(0).toString();
 	}
 	
-	public void distribuer() throws Exception{
+	public Carte distribuer() throws Exception{
 		if (this.paquet.isEmpty()) {
 			throw new Exception("Paquet vide");
 		}
-		this.paquet.remove(this.paquet.size()-1);
+		return this.paquet.remove(this.paquet.size()-1);
 	}
 }
