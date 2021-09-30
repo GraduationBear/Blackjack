@@ -1,1 +1,1 @@
-public enum Valeur {SEPT,HUIT,NEUF,DIX,V,D,R,AS}
+public enum Valeur {UN,DEUX,TROIS,QUATRE,CINQ,SIX,SEPT,HUIT,NEUF,DIX,V,D,R,AS}

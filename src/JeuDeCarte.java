@@ -6,8 +6,12 @@ public class JeuDeCarte {
 	private ArrayList<Carte> paquet;
 	
 	public JeuDeCarte(){
-		 for(Couleur c : Couleur.values()) {
+		this.paquet= new ArrayList<>();
+		for(Couleur c : Couleur.values()) {
+			
 			 for(Valeur v : Valeur.values()) {
+				 System.out.println(v);
+				 System.out.println(c);
 				 this.paquet.add(new Carte(v,c));
 			 }
 		 }
@@ -30,7 +34,7 @@ public class JeuDeCarte {
 	
 	public String retourner() throws Exception{
 		Collections.rotate(this.paquet, 1);
-		return this.premièreCarte().toString();
+		return this.paquet.get(0).toString();
 	}
 	
 	public void distribuer() throws Exception{
