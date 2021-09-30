@@ -1,0 +1,1 @@
+public enum Valeur {SEPT,HUIT,NEUF,DIX,V,D,R,AS}
