@@ -3,6 +3,7 @@ public class Client {
 	
 	public static void main(String[] args) {
 		Table table = new Table();
+		table.g
 		try {
 			table.distribuerTable();
 		} catch (Exception e) {

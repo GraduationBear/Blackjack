@@ -12,6 +12,9 @@ public class JeuDeCarte {
 				 this.paquet.add(new Carte(v,c));
 			 }
 		 }
+		
+		
+		
 	}
 	
 	public Carte premièreCarte() throws Exception{

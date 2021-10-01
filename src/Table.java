@@ -14,6 +14,7 @@ public class Table {
 	}
 	
 	
+	
 	public Joueur getJoueur() {
 		return joueur;
 	}
