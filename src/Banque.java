@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class Banque {
 	
+	
+
 	private ArrayList<Carte> jeu;
 	
 	public Banque() {
@@ -18,6 +20,10 @@ public class Banque {
 		}
 		this.jeu.add(carte);
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Banque [jeu=" + jeu + "]";
+	}
 	
 }

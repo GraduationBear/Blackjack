@@ -9,8 +9,6 @@ public class JeuDeCarte {
 		this.paquet= new ArrayList<>();
 		for(Couleur c : Couleur.values()) {
 			 for(Valeur v : Valeur.values()) {
-				 System.out.println(v);
-				 System.out.println(c);
 				 this.paquet.add(new Carte(v,c));
 			 }
 		 }

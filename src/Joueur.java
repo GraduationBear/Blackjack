@@ -27,4 +27,11 @@ public class Joueur {
 	public ArrayList<Carte> getJeu(){
 		return this.jeu;
 	}
+
+	@Override
+	public String toString() {
+		return "Joueur [jeu=" + jeu + ", solde=" + solde + "]";
+	}
+	
+	
 }

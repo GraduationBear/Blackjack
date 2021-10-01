@@ -9,7 +9,8 @@ public class Client {
 			e.printStackTrace();
 		}
 		
-		System.out.println();
+		System.out.println(table.getJoueur().toString());
+		System.out.println(table.getBanque().toString());
 		
 	}
 
