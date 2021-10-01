@@ -8,7 +8,6 @@ public class JeuDeCarte {
 	public JeuDeCarte(){
 		this.paquet= new ArrayList<>();
 		for(Couleur c : Couleur.values()) {
-			
 			 for(Valeur v : Valeur.values()) {
 				 System.out.println(v);
 				 System.out.println(c);
