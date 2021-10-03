@@ -11,10 +11,7 @@ public class JeuDeCarte {
 			 for(Valeur v : Valeur.values()) {
 				 this.paquet.add(new Carte(v,c));
 			 }
-		 }
-		
-		
-		
+		}
 	}
 	
 	public Carte premièreCarte() throws Exception{
