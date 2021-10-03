@@ -27,6 +27,7 @@ public class JeuDeCarte {
 	
 	public void melanger() {
 		Collections.shuffle(this.paquet);
+		System.out.println("Le paquet est mélengé !");
 	}
 	
 	public String retourner() throws Exception{
