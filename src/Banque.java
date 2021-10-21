@@ -1,23 +1,21 @@
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Banque {
-	
-	
 
-	private ArrayList<Carte> jeu;
+	private List<Carte> jeu;
+	
 	
 	public Banque() {
 		this.jeu = new ArrayList<>();
 	}
 	
-	public ArrayList<Carte> getJeu(){
+	public List<Carte> getJeu(){
 		return this.jeu;
 	}
 	
-	public void setJeu(Carte carte) throws Exception{
-		if (this.jeu.size()>2) {
-			throw new Exception();
-		}
+	public void setJeu(Carte carte){
 		this.jeu.add(carte);
 	}
 

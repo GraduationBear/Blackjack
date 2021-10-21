@@ -60,6 +60,9 @@ public class Table {
 	
 	public void distribuerBanque() {
 		System.out.println("La banque pioche :");
-		while 
+		int valeur=this.banque.getJeu().get(1).getValeurs().getValeur1();
+		while (valeur<=16) {
+			this.banque.setJeu(this.jeudecarte.distribuer());
+		}
 	}
 }
