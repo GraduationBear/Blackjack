@@ -58,28 +58,26 @@ public class Table {
 		this.banque.setJeu(this.jeudecarte.distribuer());
 	}
 	
-	public void distribuerBanque() {
+	public void distribuerBanque() throws Exception {
 		System.out.println("La banque pioche :");
-		
-		int valeur=Math.max(this.banque.getJeu().get(0).getValeurs().getV1(),this.banque.getJeu().get(0).getValeurs().getV2());
-		int i=1;
-		while (valeur<=16) {
-			try {
-				
-				this.banque.setJeu(this.jeudecarte.distribuer());
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			valeur+=Math.max(this.banque.getJeu().get(i).getValeurs().getV1(),this.banque.getJeu().get(i).getValeurs().getV2());
-			i++;
-			if (valeur>16) {
-				for(int c=0; i<this.banque.getJeu().size(); i++) {
-					if(this.banque.getJeu().get(c).getValeurs().getV2()==1) {
-						this.banque.getJeu().get(c).getValeurs().setV1(this.banque.getJeu().get(c).getValeurs().getV2());
-					}
-				}
-			}
+		int valeur=0;
+		if (this.banque.getJeu().get(0).getValeur().ordinal()>9) {
+			valeur=10;
+		}else{
+			valeur=this.banque.getJeu().get(0).getValeur().ordinal()+1;
 		}
+		while(valeur<=16) {
+			Carte carte=this.jeudecarte.distribuer();
+			int ajouter=carte.getValeur().ordinal();
+			System.out.println("La banque pioche : un "+carte.toString());
+			if(ajouter>=9) {
+				valeur+=10;
+			}else{
+				valeur+=ajouter+1;
+			}
+			
+			this.banque.setJeu(carte);
+		}
+		
 	}
 }

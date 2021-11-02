@@ -24,7 +24,11 @@ public class Client {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		try {
+			table.distribuerBanque();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		
 	}
