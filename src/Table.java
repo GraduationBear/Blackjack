@@ -55,25 +55,25 @@ public class Table {
 		System.out.println("Jeu de la banque :");
 		Carte c= this.jeudecarte.distribuer();
 		System.out.println(c);
-		this.banque.setJeu(this.jeudecarte.distribuer());
+		this.banque.setJeu(c);
 	}
 	
 	public void distribuerBanque() throws Exception {
-		System.out.println("La banque pioche :");
+		System.out.println("La banque pioche !");
 		int valeur=0;
-		if (this.banque.getJeu().get(0).getValeur().ordinal()>9) {
+		if (this.banque.getJeu().get(0).getValeur().ordinal()>=8) {
 			valeur=10;
 		}else{
-			valeur=this.banque.getJeu().get(0).getValeur().ordinal()+1;
+			valeur=this.banque.getJeu().get(0).getValeur().ordinal()+2;
 		}
 		while(valeur<=16) {
 			Carte carte=this.jeudecarte.distribuer();
+			System.out.println("La banque pioche : un "+ carte.toString());
 			int ajouter=carte.getValeur().ordinal();
-			System.out.println("La banque pioche : un "+carte.toString());
-			if(ajouter>=9) {
+			if(ajouter>=8){
 				valeur+=10;
 			}else{
-				valeur+=ajouter+1;
+				valeur+=ajouter+2;
 			}
 			
 			this.banque.setJeu(carte);
